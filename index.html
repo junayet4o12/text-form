@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e64b8def37.js" crossorigin="anonymous"></script>
+    <style>
+        .selected {
+            background-color: #3498db;
+            color: #fff;
+            
+            
+        }
+       
+    </style>
+</head>
+
+<body class="p-5">
+    <section class="bg-blue-400 h-[90vh] flex flex-col  justify-center items-center">
+        <h1 class="text-3xl font-semibold mb-3">My Text Editor</h1>
+        <div class="bg-blue-300 h-4/5 w-4/5 flex flex-col justify-center items-center">
+            <div class="w-[93%] h-[20%]">
+                <div class="grid grid-cols-2 md:grid-cols-3 justify-between items-center gap-2">
+                    <div class="flex gap-5 justify-start items-center">
+                        <button id="bold" class="font-semibold  w-4">B</button>
+                        <button id="italic" class="italic font-serif w-4">I</button>
+                        <button id="underline" class="underline w-4">U</button>
+                    </div>
+                    <div class="flex gap-5
+                    justify-end md:justify-center items-center">
+                        <button id="alignLeft"><i class="fa-solid fa-align-left w-6 py-[5px] hello"></i></button>
+                        <button id="alignJustify"><i class="fa-solid fa-align-justify w-6 py-[5px] hello"></i></button>
+                        <button id="alignCenter"><i class="fa-solid fa-align-center w-6 py-[5px] hello"></i></button>
+                        <button id="alignRight"><i class="fa-solid fa-align-right w-6 py-[5px] hello"></i></button>
+                    </div>
+                    <div class="flex gap-5 justify-start md:justify-end items-center">
+                        <input id="fontSize" class="w-11 text-black" type="number" name="">
+                        <button id="capitalize" class="w-4">aA</button>
+                        <input id="color" class="w-11" type="color" name="">
+                    </div>
+                </div>
+                <hr class="border-black border-[1px] mt-3">
+            </div>
+            <textarea id="inputText" class="h-[70%] w-[93%] bg-white px-4 py-2"></textarea>
+        </div>
+    </section>
+
+
+
+
+    <script src="practice 3.js"></script>
+</body>
+
+</html>
