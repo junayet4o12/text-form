@@ -11,7 +11,7 @@ const color = document.getElementById('color');
 const inputText = document.getElementById('inputText');
 
 // start the work
-bold.addEventListener('click', function () {
+bold.addEventListener('input', function () {
     console.log('hello');
     bold.classList.toggle('selected');
     if (inputText.style.fontWeight == 'bold') {
@@ -74,15 +74,22 @@ alignJustify.addEventListener('click', function () {
 })
 // align end
 
-fontSize.addEventListener('click', function () {
-    const font = parseInt(fontSize.value);
-    if (font <= 9) {
-        alert('you cant decrease the value');
-        fontSize.value = '10'
+fontSize.addEventListener('input', function () {
+
+
+    const font = fontSize.value;
+    if (font == '') {
+        inputText.style.fontSize = font + 'px';
         return;
     }
+    if (font < 0 || isNaN(parseFloat(font))) {
+        alert("You can't set this value for font size");
+        fontSize.value = '14';
+        return;
+    }
+    console.log(parseFloat(font));
     inputText.style.fontSize = font + 'px';
-})
+});
 // font end
 
 capitalize.addEventListener('click', function () {
@@ -98,7 +105,7 @@ capitalize.addEventListener('click', function () {
 // capitalize end
 
 color.addEventListener('input', function () {
-    
+
     const selectedColor = color.value;
     inputText.style.color = selectedColor;
 });
